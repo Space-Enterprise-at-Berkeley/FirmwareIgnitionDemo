@@ -21,7 +21,7 @@ namespace Comms {
         (uint8_t)(__m2 >> 0),
     };
     const int port = 42069;
-    const IPAddress ip(10, 0, 0, 21);
+    const IPAddress ip(10, 0, 0, 12);
     const IPAddress groundStation1(10, 0, 0, 69);
     const IPAddress groundStation2(10, 0, 0, 70);
 
