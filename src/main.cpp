@@ -1,14 +1,18 @@
 #include <Arduino.h>
 #include <Comms.h>
-
+#include "Thermocouples.h"
 
 Task taskTable[] = {
-
+    {Thermocouples::sampleTC, 0}
 };
 
 #define TASK_COUNT (sizeof(taskTable) / sizeof (struct Task))
 
 int main() {
+
+    Serial.begin(3600);
+
+    Thermocouples::init();
 
     while(1) {
         for(uint32_t i = 0; i < TASK_COUNT; i++) { // for each task, execute if next time >= current time
