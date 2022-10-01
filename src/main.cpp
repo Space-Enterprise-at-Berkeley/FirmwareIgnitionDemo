@@ -2,6 +2,7 @@
 #include <Comms.h>
 
 #include "Thermocouples.h"
+#include "Actuator.h"
 
 Task taskTable[] = {
     {Thermocouples::sampleTC, 0, true}
