@@ -4,7 +4,7 @@
 #include "thermocouples.h"
 
 Task taskTable[] = {
-    {Thermocouples::sampleTC, 0, true} 
+    {Thermocouples::sampleTC, 0, true} //test
 };
 
 #define TASK_COUNT (sizeof(taskTable) / sizeof (struct Task))
