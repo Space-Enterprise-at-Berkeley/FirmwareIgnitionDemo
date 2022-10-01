@@ -1,14 +1,19 @@
 #include <Arduino.h>
 #include <Comms.h>
 
+#include "tc.h"
 
 Task taskTable[] = {
-
+    { TC::sampleTC, 0, true }
 };
 
 #define TASK_COUNT (sizeof(taskTable) / sizeof (struct Task))
 
 int main() {
+
+    Serial.begin(9600);
+    Comms::initComms();
+    TC::init();
 
     while(1) {
         for(uint32_t i = 0; i < TASK_COUNT; i++) { // for each task, execute if next time >= current time
