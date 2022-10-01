@@ -1,9 +1,10 @@
 #include <Arduino.h>
 #include <Comms.h>
 
+#include "Thermocouples.h"
 
 Task taskTable[] = {
-
+    {Thermocouples::sampleTC, 0, true}
 };
 
 #define TASK_COUNT (sizeof(taskTable) / sizeof (struct Task))
